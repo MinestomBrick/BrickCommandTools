@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.minestombrick.commandtools.api"},{"l":"org.minestombrick.commandtools.api.arguments"},{"l":"org.minestombrick.commandtools.api.command"},{"l":"org.minestombrick.commandtools.api.condition"}];updateSearchResults();

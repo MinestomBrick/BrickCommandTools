@@ -1,0 +1,4 @@
+org.minestombrick.commandtools.api
+org.minestombrick.commandtools.api.arguments
+org.minestombrick.commandtools.api.command
+org.minestombrick.commandtools.api.condition
