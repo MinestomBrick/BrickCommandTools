@@ -50,7 +50,7 @@ public class CommandTools {
 
     // tools
 
-    public static void setConditions(@NotNull Command cmd, @NotNull Consumer<CommandConditionBuilder> consumer) {
+    public static void setCondition(@NotNull Command cmd, @NotNull Consumer<CommandConditionBuilder> consumer) {
         CommandConditionBuilder builder = new CommandConditionBuilder();
         consumer.accept(builder);
         cmd.setCondition(builder.build());

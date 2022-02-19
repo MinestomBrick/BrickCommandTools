@@ -30,8 +30,8 @@ public class BrickCommand extends Command {
 
     // tools
 
-    public void setConditions(@NotNull Consumer<CommandConditionBuilder> consumer) {
-        CommandTools.setConditions(this, consumer);
+    public void setCondition(@NotNull Consumer<CommandConditionBuilder> consumer) {
+        CommandTools.setCondition(this, consumer);
     }
 
     public void setConditionsAny(@NotNull Consumer<CommandConditionBuilder> consumer) {
