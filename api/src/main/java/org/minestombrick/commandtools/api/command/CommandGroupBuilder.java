@@ -6,6 +6,7 @@ import org.minestombrick.commandtools.api.CommandTools;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Consumer;
 
 public class CommandGroupBuilder {
 
@@ -31,12 +32,15 @@ public class CommandGroupBuilder {
         return this;
     }
 
-    public ChildCommandGroupBuilder group(@NotNull String name) {
-        return new ChildCommandGroupBuilder(new Command(name), this);
+    public CommandGroupBuilder group(@NotNull String name, Consumer<CommandGroupBuilder> consumer) {
+        return group(new Command(name), consumer);
     }
 
-    public ChildCommandGroupBuilder group(@NotNull Command cmd) {
-        return new ChildCommandGroupBuilder(cmd, this);
+    public CommandGroupBuilder group(@NotNull Command cmd, Consumer<CommandGroupBuilder> consumer) {
+        CommandGroupBuilder builder = new CommandGroupBuilder(cmd);
+        consumer.accept(builder);
+        commands.add(builder.build());
+        return this;
     }
 
     public Command build() {
