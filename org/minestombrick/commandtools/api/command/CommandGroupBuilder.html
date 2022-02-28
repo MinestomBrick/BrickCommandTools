@@ -74,10 +74,6 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">org.minestombrick.commandtools.api.command.CommandGroupBuilder</div>
 </div>
 <section class="class-description" id="class-description">
-<dl class="notes">
-<dt>Direct Known Subclasses:</dt>
-<dd><code><a href="ChildCommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">ChildCommandGroupBuilder</a></code></dd>
-</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CommandGroupBuilder</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
@@ -98,11 +94,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minestom.server.command.builder.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChildCommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">ChildCommandGroupBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#group(java.lang.String)" class="member-name-link">group</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#group(java.lang.String,java.util.function.Consumer)" class="member-name-link">group</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a>&gt;&nbsp;consumer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChildCommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">ChildCommandGroupBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#group(net.minestom.server.command.builder.Command)" class="member-name-link">group</a><wbr>(@NotNull net.minestom.server.command.builder.Command&nbsp;cmd)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#group(net.minestom.server.command.builder.Command,java.util.function.Consumer)" class="member-name-link">group</a><wbr>(@NotNull net.minestom.server.command.builder.Command&nbsp;cmd,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a>&gt;&nbsp;consumer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.String)" class="member-name-link">of</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
@@ -152,17 +150,19 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="group(java.lang.String)">
+<section class="detail" id="group(java.lang.String,java.util.function.Consumer)">
 <h3>group</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChildCommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">ChildCommandGroupBuilder</a></span>&nbsp;<span class="element-name">group</span><wbr><span class="parameters">(@NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a></span>&nbsp;<span class="element-name">group</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a>&gt;&nbsp;consumer)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="group(net.minestom.server.command.builder.Command)">
+<section class="detail" id="group(net.minestom.server.command.builder.Command,java.util.function.Consumer)">
 <h3>group</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChildCommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">ChildCommandGroupBuilder</a></span>&nbsp;<span class="element-name">group</span><wbr><span class="parameters">(@NotNull
- @NotNull net.minestom.server.command.builder.Command&nbsp;cmd)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a></span>&nbsp;<span class="element-name">group</span><wbr><span class="parameters">(@NotNull
+ @NotNull net.minestom.server.command.builder.Command&nbsp;cmd,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CommandGroupBuilder.html" title="class in org.minestombrick.commandtools.api.command">CommandGroupBuilder</a>&gt;&nbsp;consumer)</span></div>
 </section>
 </li>
 <li>
